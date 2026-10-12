@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post Office Information</title>
+    <style>
+      :root { font-family: Arial, sans-serif; color: #14213d; background: #f5f7fb; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; }
+      .card { width: min(90vw, 600px); padding: 2rem; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px #14213d22; }
+      h1 { text-align: center; } table { width: 100%; border-collapse: collapse; }
+      th, td { padding: .8rem; text-align: left; border-bottom: 1px solid #dbe1eb; } th { width: 45%; }
+      a { display: inline-block; margin-top: 1.25rem; color: #083375; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Post Office Information</h1>
+      <p>Results for PIN code <strong>{{ pincode }}</strong></p>
+      <table>
+        <tr><th>State</th><td>{{ state }}</td></tr>
+        <tr><th>Post office name</th><td>{{ name }}</td></tr>
+        <tr><th>Block</th><td>{{ block }}</td></tr>
+        <tr><th>District</th><td>{{ district }}</td></tr>
+      </table>
+      <a href="/">Search another PIN code</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Java / build outputs
+*.class
+out/
+bin/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Project-specific generated files
+**/__pycache__/
+**/out/
+**/.pytest_cache/
+**/.mypy_cache/

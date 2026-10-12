@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post Office Finder</title>
+    <style>
+      :root { font-family: Arial, sans-serif; color: #14213d; background: #f5f7fb; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; }
+      .card { width: min(90vw, 450px); padding: 2rem; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px #14213d22; }
+      h1 { margin-top: 0; text-align: center; font-size: 1.8rem; }
+      label, input, button { display: block; width: 100%; box-sizing: border-box; }
+      label { margin: 1rem 0 .5rem; font-weight: bold; }
+      input { padding: .75rem; border: 1px solid #9aa5b5; border-radius: 6px; font-size: 1rem; }
+      button { margin-top: 1.25rem; padding: .75rem; border: 0; border-radius: 6px; background: #083375; color: #fff; font-weight: bold; cursor: pointer; }
+      button:hover { background: #0c4da9; }
+      .error { margin: 1rem 0 0; color: #a61b1b; }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Post Office Finder</h1>
+      <p>Find post office information using an Indian PIN code.</p>
+      {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+      <form action="/" method="post">
+        <label for="zipCode">PIN code</label>
+        <input id="zipCode" name="zipCode" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required autofocus>
+        <button type="submit">Find post office</button>
+      </form>
+    </main>
+  </body>
+</html>
